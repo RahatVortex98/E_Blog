@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content  %}
+
+
+<h2>Please SignUp If You Are Not User Of Our Site</h2>
+
+
+<form class="site-form" method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+
+</form>
+
+
+
+{% endblock  %}

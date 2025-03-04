@@ -1,0 +1,185 @@
+/* General Styling */
+body {
+    background-color: #0f121f;
+    background-image: url(/static/stars.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Wrapper */
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav button {
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    color: #00dba0;
+}
+
+/* Articles Grid */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+    margin-top: 20px;
+}
+
+/* Single Article */
+.article {
+    padding: 15px;
+    border: 1px solid #00dba0;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.article:hover {
+    transform: scale(1.02);
+    border-color: #fff;
+}
+
+.article h2 {
+    font-size: 1.4em;
+}
+
+.article .author {
+    padding: 8px;
+    background: #00dba0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: #0f121f;
+    font-weight: bold;
+}
+
+/* Article Details */
+.article-detail .article {
+    padding: 0;
+}
+
+.article-detail .article img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.article-detail .article h2 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2.4em;
+}
+
+.article-detail .article h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #00dba0;
+}
+
+.article-detail .article p {
+    margin: 10px 20px;
+    line-height: 1.6;
+}
+
+/* Forms */
+.site-form {
+    margin-top: 60px;
+    border: 1px solid #00dba0;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.site-form input, .site-form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #00dba0;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.site-form input[type="submit"] {
+    background: #00dba0;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.site-form input[type="submit"]:hover {
+    background: #00b383;
+}
+
+/* Highlight Button */
+a.highlight {
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #00dba0;
+    transition: 0.3s;
+}
+
+a.highlight:hover {
+    background: #00dba0;
+    color: #0f121f;
+}
+
+/* Error Messages */
+.errorlist li {
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+    color: #FF5722;
+    background: rgba(255, 87, 34, 0.1);
+    border-radius: 4px;
+}

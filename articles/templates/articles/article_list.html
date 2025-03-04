@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% for article in articles %}
+    {% if article.slug %}  {# Only show articles with a valid slug #}
+        <div class="article">
+            <h2>
+                <a href="{% url 'article_details' article.slug %}">{{ article.title }}</a>
+            </h2>
+            <p>{{ article.snippet }}</p>
+            <p>{{ article.createdAt }}</p>
+            <img src="{{ article.thumb.url }}" alt="">
+            <p>{{ article.author }}</p>
+        </div>
+    {% else %}
+        
+    {% endif %}
+{% endfor %}
+
+{% endblock %}
